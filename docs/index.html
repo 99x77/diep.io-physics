@@ -1,1 +1,71 @@
-<h1>Test a </h1>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Physics</title>
+		<style>
+			table {
+				border: 1px solid #000000;
+				text-align: center;
+			}
+			th {
+				height: 30px;
+			}
+			td {
+				height: 25px;
+			}
+		</style>
+		<script>
+			MathJax = {
+				"chtml": {
+					"matchFontHeight": false
+				},
+				"tex": {
+					"inlineMath": [
+						['$', '$']
+					]
+				}
+			};
+		</script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<p>$ Dm $</p>
+		\begin{align}
+			Dm_{A} = \begin{cases}
+				\dfrac{3}{2} \cdot Df_{A} & E_{A} = E_{B} = Tank \\
+				\\
+				\dfrac{1}{4} \cdot Df_{A} & E_{B} = Bullet \\
+				\\
+				Df_{A} & otherwise
+			\end{cases}
+			\quad \quad \quad
+			Dm_{B} = \begin{cases}
+				\dfrac{3}{2} \cdot Df_{B} & E_{A} = E_{B} = Tank \\
+				\\
+				\dfrac{1}{4} \cdot Df_{B} & E_{A} = Bullet \\
+				\\
+				Df_{B} & otherwise
+			\end{cases} \\
+		\end{align}
+		<p>$ \Delta H $</p>
+		\begin{align}
+			\Delta H_{A} = \begin{cases}
+				H_{A} & H_{A} - Dm_{B} \lt 0 \\
+				Dm_{B} & otherwise
+			\end{cases}
+			\\ \\
+			\Delta H_{B} = \begin{cases}
+				H_{B} & H_{B} - Dm_{A} \lt 0 \\
+				Dm_{A} & otherwise
+			\end{cases}
+		\end{align}
+		<p>$ Da $</p>
+		\begin{align}
+			Da_{A} &= Dm_{B} - \Delta H_{A}\biggl(1 - \dfrac{\Delta H_{B}}{Dm_{A}}\biggr) \\
+			\\
+			Da_{B} &= Dm_{A} - \Delta H_{B}\biggl(1 - \dfrac{\Delta H_{A}}{Dm_{B}}\biggr) \\
+		\end{align}
+	</body>
+</html>
